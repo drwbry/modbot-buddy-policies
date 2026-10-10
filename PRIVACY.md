@@ -15,7 +15,9 @@ posts, summaries, and report alerts to that community’s own Discord server.
   most-upvoted comments in order to write a summary. For the weekly digest, it
   reads the week’s top posts and a few of their top comments.
 - **Community settings** chosen by the community’s moderators, such as the
-  bot’s persona name, writing style, thresholds, and any Discord webhook URLs.
+  bot’s persona name, writing style, thresholds, the community’s Gemini API
+  key, and any Discord webhook URLs. These settings are visible to that
+  community’s moderators.
 - **Operational records:** Reddit post and comment identifiers, the comment
   milestone each summary was written for, timestamps, and error messages, used
   to avoid duplicate summaries and duplicate Discord messages.
@@ -58,12 +60,13 @@ The App runs on Reddit’s Devvit platform and is subject to Reddit’s platform
 terms and privacy practices.
 
 - **Google Gemini API** (generativelanguage.googleapis.com). Post and comment
-  text, without author usernames, is sent to Google to generate summaries. The
-  App uses a paid Gemini API account; under Google’s Gemini API terms for paid
-  services, Google does not use these prompts or responses to improve its
-  products, and logs them for a limited time only to detect abuse and meet legal
-  requirements. Reddit data is not used by the App or the operator to train any
-  AI model.
+  text, without author usernames, is sent to Google to generate summaries,
+  using the Gemini API key that the community’s moderators provide. The App’s
+  setup guide asks communities to use a paid key; under Google’s Gemini API
+  terms for paid services, Google does not use prompts or responses to improve
+  its products, and logs them for a limited time only to detect abuse and meet
+  legal requirements. Reddit data is not used by the App or the operator to
+  train any AI model.
 - **Discord** (discord.com), only if a community’s moderators turn Discord on
   and provide webhook URLs. The App then sends post titles, links, author
   usernames, short text excerpts, summaries, and (for report alerts) report
@@ -76,8 +79,8 @@ cross-context behavioral advertising.
 ## Security
 
 The App uses Reddit Devvit’s hosted execution and storage services and limits
-stored information to what its features need. The Gemini API key is stored as
-an encrypted Devvit secret. No method of storage or transmission can be
+stored information to what its features need. A community’s Gemini API key and
+webhook URLs are stored in Devvit’s app settings for that community. No method of storage or transmission can be
 guaranteed to be completely secure.
 
 ## Your choices and requests

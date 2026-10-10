@@ -47,6 +47,14 @@ preview and edit summaries, exclude posts, remove any summary, turn features
 off, or uninstall the App. Moderators who turn on Discord are responsible for
 choosing appropriate channels and for keeping their webhook URLs private.
 
+## Gemini API keys
+
+Each community supplies its own Google Gemini API key in the App’s settings. The
+community’s moderators are responsible for that key, for its costs, and for
+complying with Google’s terms when using it. Moderators should use a key created
+for this purpose, keep it private, and replace it if it may have been exposed.
+The operator’s own key is used only for communities the operator chooses.
+
 ## Third-party services
 
 The App operates through Reddit Devvit and uses the Google Gemini API and,
